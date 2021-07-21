@@ -4,7 +4,7 @@ const app = express();
 const port = 8000;
 
 app.use((req, res, next) => {
-	// res.header('Access-Control-Allow-Origin', '*')
+	res.header('Access-Control-Allow-Origin', '*')
 	next();
 })
 
