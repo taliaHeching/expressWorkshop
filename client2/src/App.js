@@ -6,18 +6,13 @@ function App() {
   const [message, setMessage] = useState();
   useEffect(() => {
     (async () => {
-      try {
-        const res = await fetch('http://localhost:8000')
-        const { data } = await res.json();
-        setMessage(data)
-      } catch (error) {
-        console.error('error: ', error);
-      }
+      //make the fetch request here (in a try & catch block), and enter the data you receive to the message state
     })();
   }, []);
 
   return (
     <div className="App">
+      <h1>Hola</h1>
       {message &&
         <div className="message">
           {message}
